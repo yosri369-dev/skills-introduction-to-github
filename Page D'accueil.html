@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Recettes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+
+        <!-- Open Button -->
+        <a href="index.html" class="flex title-font font-medium items-center text-pink-800 mb-4 md:mb-0">
+            <img src="C:\Users\yhamd\OneDrive\Desktop\TEK-UP 2\Recette images\Cookly logo .png" alt="Cookly Logo" class="w-40 h-15">
+            <span class="ml-3 text-2xl font-bold">Cookly</span>
+        </a>
+
+        <!-- Menu de navigation (Desktop) -->
+        <nav class="hidden md:flex md:items-center md:space-x-6 text-base relative">
+            <a href="index.html" class="text-pink-700 hover:text-pink-500 font-semibold">Accueil</a>
+
+            <!-- Menu déroulant Recettes -->
+            <div class="relative group">
+                <div class="text-pink-700 hover:text-pink-500 font-semibold cursor-pointer px-4 py-2">
+                    Recettes
+                </div>
+
+                <!-- Sous-menu (POSITIONNÉ À GAUCHE) -->
+                <div class="fixed top-13 left-0 w-full bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto dropdown-menu">
+                    <div class="grid grid-cols-4 gap-6 p-6">
+                        <!-- Recettes par catégorie -->
+                        <div>
+                            <span class="text-pink-800 font-bold px-6 py-2 block">🍽️ Recettes par catégorie</span>
+                            <a href="recettes-apero.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥂 Apéritifs</a>
+                            <a href="recettes-entrees.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥗 Entrées</a>
+                            <a href="recettes-plats.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍽️ Plats</a>
+                            <a href="recettes-desserts.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍰 Desserts</a>
+                            <a href="recettes-boissons.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍹 Boissons</a>
+                            <a href="recettes-brunch.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥐 Brunch & Petit Déjeuner</a>
+                        </div>
+                
+                        <!-- Recettes par régime -->
+                        <div>
+                            <span class="text-pink-800 font-bold px-6 py-2 block">🥦 Recettes par régime</span>
+                            <a href="recettes-healthy.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">💪 Healthy</a>
+                            <a href="recettes-vegetariennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥗 Végétariennes</a>
+                            <a href="recettes-équilibreés.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">⚖️ Recettes Équilibrées</a>
+                            <a href="recettes-sans-gluten.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🚫🌾 Sans Gluten</a>
+                        </div>
+                
+                        <!-- Recettes par fêtes -->
+                        <div>
+                            <span class="text-pink-800 font-bold px-6 py-2 block">🎉 Recettes par fêtes</span>
+                            <a href="recettes-ramadan.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🌙 Ramadan</a>
+                            <a href="recettes-Exception.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">✨ Repas d'Exception</a>
+                            <a href="recettes-saint-valentin.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">❤️ Saint-Valentin</a>
+                            <a href="recettes-halloween.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🎃 Halloween</a>
+                            <a href="recettes-noel.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🎄 Noël</a>
+                        </div>
+                
+                        <!-- Cuisine du Monde -->
+                        <div>
+                            <span class="text-pink-800 font-bold px-6 py-2 block">🌍 Cuisine du Monde</span>
+                            <a href="recettes-italiennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍕 Italiennes</a>
+                            <a href="recettes-japonaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍣 Japonaises</a>
+                            <a href="recettes-indiennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍛 Indiennes</a>
+                            <a href="recettes-Tunisienne.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🌶️ Tunisienne</a>
+                            <a href="recettes-francaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥖 Françaises</a>
+                            <a href="recettes-libanaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥙 Libanaises</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <!--Contact-->
+            <a href="contact.html" class="bg-pink-700 text-white px-4 py-2 rounded-lg hover:bg-pink-600 font-semibold">Contact</a>
+
+            <!--Rechercher-->
+            <form id="searchForm" class="flex items-center space-x-2">
+                <input type="text" id="searchInput" placeholder="Rechercher une recette..." class="border border-gray-300 rounded-full px-4 py-2 w-64 focus:outline-none focus:border-indigo-500">
+                <button type="submit" class="bg-pink-700 text-white px-4 py-2 rounded-lg hover:bg-pink-600 font-semibold">Rechercher</button>
+            </form>
+        </nav>
+
+        <!-- Open Button -->
+        <button id="openPopup" class="px-6 py-3 text-lg font-bold text-white bg-red-500 rounded-full shadow-lg hover:bg-red-600 transition flex items-center gap-2">🍽️ Sign Up / Login</button>
+
+        <!-- Popup Modal -->
+        <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+          <div class="bg-white rounded-3xl p-6 w-96 shadow-xl transform transition-all scale-95 relative">
+              <span class="close text-gray-600 text-2xl absolute right-6 top-4 cursor-pointer">&times;</span>
+              <h2 class="text-2xl font-bold text-center text-red-500 mb-2">Welcome to Cookly! 🍕</h2>
+              <p class="text-gray-500 text-center mb-4">Sign in to save & share your favorite recipes!</p>
+
+              <form id="authForm" class="space-y-4">
+                  <input type="text" id="username" placeholder="🍎 Enter Username" class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-red-400 outline-none">
+                  <input type="password" id="password" placeholder="🔑 Enter Password" class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-red-400 outline-none">
+                  <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-full font-bold hover:bg-red-600 transition">
+                      ✅ Let’s Cook!
+                  </button>
+              </form>
+          </div>
+      </div>
+
+    </div>
+  </header>
+  <br>
+  <br>
+  <br>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8">
+    <!--🍰💫🎉 Des Créations Gourmandes qui Éveillent Toutes les Envies ! 🎉🍽️💖-->
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍰💫🎉Des Recettes Gourmandes PourTtoutes Les Envies  ! 🎉🍽️💖</h2>
+    
+    <p class="text-lg text-center text-gray-700 px-4" style="font-family: Georgia, 'Times New Roman', serif;">
+      Chez Cookly, nous célébrons la diversité et la richesse de la cuisine sous toutes ses formes.<br> Que vous cherchiez à préparer un apéritif qui pique la curiosité, maîtriser les bases culinaires essentielles, concocter un dessert à tomber, ou surprendre avec un plat principal époustouflant, vous êtes au bon endroit.<br>Découvrez nos recettes soigneusement sélectionnées pour enrichir votre table et partager des moments inoubliables autour de bons plats. Alors, à vos tabliers ! 🍽️✨
+    </p>
+    
+    <br>
+    
+    <!--🍴✨ Nos Dernières Recettes ✨🍽️ (swiper)-->
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍴✨ Nos Dernières Recettes ✨🍽️</h2>
+    <div id="recipeList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- Pates Carbonara -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Pâtes Carbonara</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Pates Carbonara.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Ratatouille -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Ratatouille</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+          <a href="Ratatouille.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Bœuf Bourguignon -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Bœuf Bourguignon</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 2 heures</p>
+          <a href="Bœuf Bourguignon.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Quiche Lorraine -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Quiche Lorraine</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+          <a href="Quiche Lorraine.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tiramisu -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Tiramisu</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 min (repos 4h)</p>
+          <a href="Tiramisu.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Pizza Margherita -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Pizza Margherita" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Pizza Margherita</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1 h 30 min</p>
+          <a href="Pizza Margherita.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+         <!-- Ajoutez plus de recettes ici -->
+
+    </div>
+
+    <br>
+    <br>
+
+     <!-- 🌱🍓 Gourmandise Sans Viande 🍓🌱 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🌱🍓 Gourmandise Sans Viande 🍓🌱
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Falafel -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Falafel" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Falafel</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Falafel.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Lentilles au curry -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Lentilles au curry" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Lentilles au curry</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Lentilles au curry.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Quinoa aux légumes grillés -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" alt="Quinoa aux légumes grillés">
+            <img src="" alt="Quinoa aux légumes grillés" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Quinoa aux légumes grillés</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Quinoa aux légumes grillés.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Salade César Végétale -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Salade César Végétale" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Salade César Végétale</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Salade César Végétale.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Purée de Pommes de Terre aux Herbes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src=""  alt="Purée de Pommes de Terre aux Herbes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Purée de Pommes de Terre aux Herbes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Purée de Pommes de Terre aux Herbes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tartine Avocat-Tomate -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tartine Avocat-Tomate" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tartine Avocat-Tomate</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 5 minutes</p>
+            <a href="Tartine Avocat-Tomate.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Soupe de Légumes Rapide -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Soupe de Légumes Rapide" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Soupe de Légumes Rapide</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Soupe de Légumes Rapide.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Gratin de Courgettes au Fromage Végétal -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Kaak Warka" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Gratin de Courgettes au Fromage Végétal</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Gratin de Courgettes au Fromage Végétal.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      <!-- Ajoutez plus de recettes ici -->
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination -->
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+    
+    <br>
+    <br>
+
+     <!-- 🧆🌶️ Nos Trésors de la Cuisine Tunisienne 🌶️🧆 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🧆🌶️ Nos Trésors de la Cuisine Tunisienne 🌶️🧆</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Ojja -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Recette Image" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Ojja Merguez</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="ojja.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Brick à l'œuf -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Brik à l'œuf" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Brick à l'œuf</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="brik.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Couscous Tunisien -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Couscous Tunisien" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Couscous Tunisien</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1 heure</p>
+            <a href="couscous.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Lablabi -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Lablabi" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Lablabi</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="lablabi.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tajine Malsouka au Poulet -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tajine Malsouka" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tajine Malsouka au Poulet</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+            <a href="tajine.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Makroud kairouan -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Makroud" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Makroud kairouan</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="makroud.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Slata Mechouia -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Slata Mechouia" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Slata Mechouia</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="slata.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Kaak Warka -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Kaak Warka" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Kaak Warka</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1h 30 minutes</p>
+            <a href="kaak.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      <!-- Ajoutez plus de recettes ici -->
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination -->
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🌟🍽️ Nos Recettes pour des Repas d'Exception 🍽️🌟 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🌟🍽️ Nos Recettes pour des Repas d'Exception 🍽️🌟
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Rôti de bœuf aux herbes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Rôti de bœuf aux herbes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Rôti de bœuf aux herbes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 2h 45 minutes</p>
+            <a href="Rôti de bœuf aux herbes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Dinde farcie -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Dinde farcie" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Dinde farcie</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 3 heures</p>
+            <a href="Dinde farcie.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Foie gras maison -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Foie gras maison" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Foie gras maison</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1h 30 min</p>
+          <a href="Foie gras maison.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Saumon en Croûte de Pistoche -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Saumon en Croûte de Pistoche" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Saumon en Croûte de Pistoche</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1 heure</p>
+            <a href="Saumon en Croûte de Pistoche.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tourte aux Épinards et Ricotta -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src=""  alt="Tourte aux Épinards et Ricotta" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tourte aux Épinards et Ricotta</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1h 15</p>
+            <a href="Tourte aux Épinards et Ricotta.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Soupe de Homard -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Soupe de Homard" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Soupe de Homard</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1 heure</p>
+            <a href="Soupe de Homard.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Canard Laqué -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Canard Laqué" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Canard Laqué</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1h 30 min</p>
+            <a href="Canard Laqué.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Gâteau de Noël aux Fruits Confits -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Gâteau de Noël aux Fruits Confits" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Gâteau de Noël aux Fruits Confits</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 2 heures</p>
+            <a href="Gratin de Courgettes au Fromage Végétal.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tarte Tatin aux Pommes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <img src="" alt="Tarte Tatin aux Pommes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+          <h3 class="text-lg font-medium mb-1">Tarte Tatin aux Pommes</h3>
+          <p class="text-sm text-gray-600 mb-2">Temps de préparation : 1 heure</p>
+          <a href="Tarte Tatin aux Pommes.html" class="text-rose-800 hover:underline">Voir plus</a>
+      </div>
+
+      <!-- Bouillabaisse Provençale -->
+      <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+        <img src="" alt="Bouillabaisse Provençale" class="w-full h-48 object-cover rounded-t-lg mb-2">
+        <h3 class="text-lg font-medium mb-1">Bouillabaisse Provençales</h3>
+        <p class="text-sm text-gray-600 mb-2">Temps de préparation : 2 heures</p>
+        <a href="Bouillabaisse Provençale.html" class="text-rose-800 hover:underline">Voir plus</a>
+      </div>
+
+
+      <!-- Ajoutez plus de recettes ici -->
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination -->
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🌿🥞 Brunch & Éveil Gourmand ☕🍓 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🌿🥞 Brunch & Éveil Gourmand ☕🍓</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Pancakes aux Fruits -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Pancakes aux Fruits" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Pancakes aux Fruits</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Pancakes aux Fruits.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Toasts à l'Avocat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Toasts à l'Avocat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Toasts à l'Avocat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Toasts à l'Avocat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Omelette aux Champignons -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Omelette aux Champignons" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Omelette aux Champignons</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Omelette aux Champignons.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Smoothie Bowl Tropical -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Smoothie Bowl Tropical" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Smoothie Bowl Tropical</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Smoothie Bowl Tropical.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Porridge à la Banane et Amandes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Porridge à la Banane et Amandes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Porridge à la Banane et Amandes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 8 minutes</p>
+            <a href="Porridge à la Banane et Amandes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Croissants Maison -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Croissants Maison" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Croissants Maison</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Croissants Maison.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Granola Maison avec Yaourt -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Granola Maison avec Yaourt" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Granola Maison avec Yaourt</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Granola Maison avec Yaourt.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Muffins aux Myrtilles -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Muffins aux Myrtilles" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Muffins aux Myrtilles</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Muffins aux Myrtilles.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      <!-- Ajoutez plus de recettes ici -->
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍹✨ Élixirs Rafraîchissants ☕🥤 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍹✨ Élixirs Rafraîchissants ☕🥤</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Smoothie aux Fruits Rouges -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Smoothie aux Fruits Rouges" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Smoothie aux Fruits Rouges</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 5 minutes</p>
+            <a href="Smoothie aux Fruits Rouges.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Jus de Pomme et Gingembre -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Jus de Pomme et Gingembre" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Jus de Pomme et Gingembre</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 5 minutes</p>
+            <a href="Jus de Pomme et Gingembre.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Latte au Curcuma -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Latte au Curcuma" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Latte au Curcuma</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Latte au Curcuma.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Jus d'Orange Frais -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Jus d'Orange Frais" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Jus d'Orange Frais</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 5 minutes</p>
+            <a href="Jus d'Orange Frais.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Thé Glacé Maison -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Thé Glacé Maison" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Thé Glacé Maison</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Thé Glacé Maison.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍸🥂 Instants Apéro & Gourmandise 🧀🍢 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍸🥂 Instants Apéro & Gourmandise 🧀🍢
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Guacamole et Chips de Maïs -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Guacamole et Chips de Maïs" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Guacamole et Chips de Maïs</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Guacamole et Chips de Maïs.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Mini Brochettes de Légumes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Mini Brochettes de Légumes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Mini Brochettes de Légumes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Mini Brochettes de Légumes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Bruschetta Tomate-Basilic -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Bruschetta Tomate-Basilic" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Bruschetta Tomate-Basilic</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Bruschetta Tomate-Basilic.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Hummus Maison -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Hummus Maison" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Hummus Maison</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Hummus Maison.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tapenade d'Olives -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tapenade d'Olives" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tapenade d'Olives</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Tapenade d'Olives.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍽️🌿 Les Premières Saveurs 🧀🍅 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍽️🌿 Les Premières Saveurs 🧀🍅
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Soupe de Carottes et Gingembre -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Soupe de Carottes et Gingembre" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Soupe de Carottes et Gingembre</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Soupe de Carottes et Gingembre.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Salade de Quinoa et Légumes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Salade de Quinoa et Légumes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Salade de Quinoa et Légumes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Salade de Quinoa et Légumes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tzatziki au Yaourt -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tzatziki au Yaourt" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tzatziki au Yaourt</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Tzatziki au Yaourt.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Salade de Tomates et Mozzarella -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Salade de Tomates et Mozzarella" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Salade de Tomates et Mozzarella</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Salade de Tomates et Mozzarella.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍛✨ Plaisirs du Chef 🥘🥕 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍛✨ Plaisirs du Chef 🥘🥕
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Risotto aux Champignons -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Risotto aux Champignons" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Risotto aux Champignons</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Risotto aux Champignons.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tofu Sauté aux Légumes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tofu Sauté aux Légumes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tofu Sauté aux Légumes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Tofu Sauté aux Légumes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Curry de Pois Chiches -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Curry de Pois Chiches" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Curry de Pois Chiches</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Curry de Pois Chiches.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Gratin de Courgettes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Gratin de Courgettes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Gratin de Courgettes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+            <a href="Gratin de Courgettes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍮🎂 Finale Sucrée & Plaisirs Fondants 🍯🍪
+
+ (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍮🎂 Finale Sucrée & Plaisirs Fondants 🍯🍪
+
+
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Tarte aux Pommes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tarte aux Pommes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tarte aux Pommes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+            <a href="Tarte aux Pommes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Brownie au Chocolat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Brownie au Chocolat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Brownie au Chocolat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Brownie au Chocolat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Crêpes à la Banane -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Crêpes à la Banane" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Crêpes à la Banane</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Crêpes à la Banane.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Mousse au Chocolat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Mousse au Chocolat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Mousse au Chocolat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Mousse au Chocolat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🥗🌿 Évasion Healthy & Gourmande 🍎✨ (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🥗🌿 Évasion Healthy & Gourmande 🍎✨
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Salade de Kale et Avocat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Salade de Kale et Avocat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Salade de Kale et Avocat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Salade de Kale et Avocat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Granola au Yaourt -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Granola au Yaourt" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Granola au Yaourt</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Granola au Yaourt.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Poke Bowl de Saumon -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Poke Bowl de Saumon" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Poke Bowl de Saumon</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Poke Bowl de Saumon.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Soup de Butternut -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Soupe de Butternut" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Soupe de Butternut</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Soupe de Butternut.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🥗✨ Équilibre & Saveurs 🍋🍠(swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🥗✨ Équilibre & Saveurs 🍋🍠
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Salade de Poulet Grillé -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Salade de Poulet Grillé" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Salade de Poulet Grillé</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Salade de Poulet Grillé.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Saumon Grillé et Riz -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Saumon Grillé et Riz" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Saumon Grillé et Riz</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Saumon Grillé et Riz.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Poêlée de Légumes Sautés -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Poêlée de Légumes Sautés" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Poêlée de Légumes Sautés</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Poêlée de Légumes Sautés.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Wrap de Poulet au Guacamole -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Wrap de Poulet au Guacamole" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Wrap de Poulet au Guacamole</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Wrap de Poulet au Guacamole.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+  
+    <br>
+    <br>
+
+    <!-- 🌙🕌 Délices du Ramadan (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🌙🕌 Délices du Ramadan
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Harira Marocaine -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Harira Marocaine" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Harira Marocaine</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+            <a href="Harira Marocaine.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Briouates au Poulet -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Briouates au Poulet" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Briouates au Poulet</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Briouates au Poulet.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Sfenj Marocain -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Sfenj Marocain" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Sfenj Marocain</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Sfenj Marocain.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Chebakia -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Chebakia" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Chebakia</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 60 minutes</p>
+            <a href="Chebakia.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- ❤️✨ Magie de l'Amour 🥂🌹 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">❤️✨ Magie de l'Amour 🥂🌹
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Coeurs de Saumon Fumé -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Coeurs de Saumon Fumé" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Coeurs de Saumon Fumé</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Coeurs de Saumon Fumé.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Fondant au Chocolat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Fondant au Chocolat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Fondant au Chocolat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Fondant au Chocolat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Caviar et Crème Fraîche -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Caviar et Crème Fraîche" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Caviar et Crème Fraîche</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Caviar et Crème Fraîche.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tiramisu au Nutella -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tiramisu au Nutella" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tiramisu au Nutella</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Tiramisu au Nutella.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🖤🎃 Fête des Ombres et Saveurs 🍫🕷️ (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🖤🎃 Fête des Ombres et Saveurs 🍫🕷️
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Soupe de Potiron -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Soupe de Potiron" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Soupe de Potiron</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Soupe de Potiron.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Muffins Citrouille et Chocolat -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Muffins Citrouille et Chocolat" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Muffins Citrouille et Chocolat</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Muffins Citrouille et Chocolat.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Popcorn au Caramel -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Popcorn Effrayant" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Popcorn Effrayant</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 10 minutes</p>
+            <a href="Popcorn Effrayant.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Gâteau en Forme de Citrouille -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Gâteau en Forme de Citrouille" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Gâteau en Forme de Citrouille</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 40 minutes</p>
+            <a href="Gâteau en Forme de Citrouille.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🎄✨ Magie de Noël 🍷🍪 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🎄✨ Magie de Noël 🍷
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Dinde Farcie -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Dinde Farcie" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Dinde Farcie</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 90 minutes</p>
+            <a href="Dinde Farcie.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Bûche de Noël -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Bûche de Noël" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Bûche de Noël</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 60 minutes</p>
+            <a href="Bûche de Noël.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Foie Gras en Entrée -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Foie Gras en Entrée" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Foie Gras en Entrée</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Foie Gras en Entrée.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Chapon aux Marrons -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Chapon aux Marrons" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Chapon aux Marrons</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 85 minutes</p>
+            <a href="Chapon aux Marrons.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍝🍅 Voyage en Italie 🍕🍷 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍝🍅 Voyage en Italie 🍕🍷
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Pizza Margherita -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Pizza Margherita" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Pizza Margherita</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Pizza Margherita.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Lasagnes à la Bolognese -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Lasagnes à la Bolognese" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Lasagnes à la Bolognese</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 60 minutes</p>
+            <a href="Lasagnes à la Bolognese.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Risotto aux Champignons -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Risotto aux Champignons" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Risotto aux Champignons</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 35 minutes</p>
+            <a href="Risotto aux Champignons.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tiramisu Classique -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tiramisu Classique" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tiramisu Classique</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Tiramisu Classique.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍣🌸 Voyage au Japon 🍱🍶 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍣🌸 Voyage au Japon 🍱🍶
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Sushi au Saumon -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Sushi au Saumon" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Sushi au Saumon</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Sushi au Saumon.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Ramen au Poulet -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Ramen au Poulet" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Ramen au Poulet</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Ramen au Poulet.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Tempura de Crevettes -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Tempura de Crevettes" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Tempura de Crevettes</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 25 minutes</p>
+            <a href="Tempura de Crevettes.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Mochi Glacé -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Mochi Glacé" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Mochi Glacé</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 20 minutes</p>
+            <a href="Mochi Glacé.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🍲🕌 Voyage Épicé en Inde 🥭🍚 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🍲🕌 Voyage Épicé en Inde 🥭🍚
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Poulet Tikka Masala -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Poulet Tikka Masala" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Poulet Tikka Masala</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Poulet Tikka Masala.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Naan à l'Ail -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Naan à l'Ail" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Naan à l'Ail</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Naan à l'Ail.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Samosas -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Samosas" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Samosas</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Samosas.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Gulab Jamun -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Gulab Jamun" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Gulab Jamun</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Gulab Jamun.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🥖🍷 Élégance à la Française 🧀🍽️ (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🥖🍷 Élégance à la Française 🧀🍽️
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Coq au Vin -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Coq au Vin" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Coq au Vin</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 120 minutes</p>
+            <a href="Coq au Vin.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Ratatouille -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Ratatouille" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Ratatouille</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Ratatouille.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Quiche Lorraine -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Quiche Lorraine" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Quiche Lorraine</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 60 minutes</p>
+            <a href="Quiche Lorraine.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Crème Brûlée -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Crème Brûlée" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Crème Brûlée</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Creme Brulee.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 🌟🍽️ Le Liban dans l'Assiette 🍋🥙 (swiper)-->    
+    <h2 class="text-4xl font-bold text-center text-rose-800 mb-6" style="font-family: Georgia, 'Times New Roman', serif;">🌟🍽️ Le Liban dans l'Assiette 🍋🥙
+    </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Mezzé Libanais -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Mezzé Libanais" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Mezzé Libanais</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 45 minutes</p>
+            <a href="Mezze Libanais.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Falafel -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Falafel" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Falafel</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 30 minutes</p>
+            <a href="Falafel.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Taboulé -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Taboulé" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Taboulé</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 15 minutes</p>
+            <a href="Taboule.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+        <!-- Baklava -->
+        <div class="swiper-slide bg-white rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <img src="" alt="Baklava" class="w-full h-48 object-cover rounded-t-lg mb-2">
+            <h3 class="text-lg font-medium mb-1">Baklava</h3>
+            <p class="text-sm text-gray-600 mb-2">Temps de préparation : 60 minutes</p>
+            <a href="Baklava.html" class="text-rose-800 hover:underline">Voir plus</a>
+        </div>
+
+      </div>
+
+      <!-- Boutons de navigation -->
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <br>
+    <br>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-pink-800 text-white py-4 text-center">
+    <p>&copy; 2025 Site de Recettes. Tous droits réservés.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Barre de recherche
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const query = document.getElementById('searchInput').value.trim();
+      if (query) {
+        alert(`Recherche pour : "${query}"`);
+
+        // Ici, vous pouvez ajouter une requête API pour filtrer les recettes
+
+      }
+    });
+
+    //Swiper
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,   // Affiche 1 slide à la fois
+      spaceBetween: 20,   // Espace entre les slides
+      loop: true,         // Active la boucle infinie
+      navigation: {       // Flèches de navigation
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {       // Pagination (petits points en bas)
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {      // Responsive : plusieurs slides sur grands écrans
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const popup = document.getElementById("popup");
+          const openBtn = document.getElementById("openPopup");
+          const closeBtn = document.querySelector(".close");
+          const form = document.getElementById("authForm");
+
+          openBtn.addEventListener("click", () => {
+              popup.classList.remove("hidden");
+              popup.classList.add("flex");
+          });
+
+          closeBtn.addEventListener("click", () => {
+              popup.classList.add("hidden");
+          });
+
+          window.addEventListener("click", (e) => {
+              if (e.target === popup) {
+                  popup.classList.add("hidden");
+              }
+          });
+
+          form.addEventListener("submit", (e) => {
+              e.preventDefault();
+              const username = document.getElementById("username").value;
+              const password = document.getElementById("password").value;
+              alert(`🍕 Welcome, ${username}!\n🔒 Your foodie account is ready!`);
+          });
+      });
+
+  </script>
+
+</body>
+
+</html>

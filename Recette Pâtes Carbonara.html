@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pâtes Carbonara</title>
+    <!-- Ajout de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- 5 Stars -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /*  Ajout d'un délai pour éviter la disparition instantanée */
+        .dropdown-menu {
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    
+    <!-- Header -->
+
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+            <!-- Logo et Nom -->
+            <a href="index.html" class="flex title-font font-medium items-center text-pink-800 mb-4 md:mb-0">
+                <img src="C:\Users\yhamd\OneDrive\Desktop\TEK-UP 2\Recette images\Cookly logo .png" alt="Cookly Logo" class="w-40 h-15">
+                <span class="ml-3 text-2xl font-bold">Cookly</span>
+            </a>
+    
+            <!-- Menu de navigation (Desktop) -->
+            <nav class="hidden md:flex md:items-center md:space-x-6 text-base relative">
+                <a href="index.html" class="text-pink-700 hover:text-pink-500 font-semibold">Accueil</a>
+    
+                <!-- Menu déroulant Recettes -->
+                <div class="relative group">
+                    <div class="text-pink-700 hover:text-pink-500 font-semibold cursor-pointer px-4 py-2">
+                        Recettes
+                    </div>
+    
+                    <!-- Sous-menu (POSITIONNÉ À GAUCHE) -->
+                    <div class="fixed top-13 left-0 w-full bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto dropdown-menu">
+                        <div class="grid grid-cols-4 gap-6 p-6">
+                            <!-- Recettes par catégorie -->
+                            <div>
+                                <span class="text-pink-800 font-bold px-6 py-2 block">🍽️ Recettes par catégorie</span>
+                                <a href="recettes-apero.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥂 Apéritifs</a>
+                                <a href="recettes-entrees.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥗 Entrées</a>
+                                <a href="recettes-plats.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍽️ Plats</a>
+                                <a href="recettes-desserts.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍰 Desserts</a>
+                                <a href="recettes-boissons.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍹 Boissons</a>
+                                <a href="recettes-brunch.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥐 Brunch & Petit Déjeuner</a>
+                            </div>
+                    
+                            <!-- Recettes par régime -->
+                            <div>
+                                <span class="text-pink-800 font-bold px-6 py-2 block">🥦 Recettes par régime</span>
+                                <a href="recettes-healthy.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">💪 Healthy</a>
+                                <a href="recettes-vegetariennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥗 Végétariennes</a>
+                                <a href="recettes-équilibreés.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">⚖️ Recettes Équilibrées</a>
+                                <a href="recettes-sans-gluten.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🚫🌾 Sans Gluten</a>
+                            </div>
+                    
+                            <!-- Recettes par fêtes -->
+                            <div>
+                                <span class="text-pink-800 font-bold px-6 py-2 block">🎉 Recettes par fêtes</span>
+                                <a href="recettes-ramadan.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🌙 Ramadan</a>
+                                <a href="recettes-Exception.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">✨ Repas d'Exception</a>
+                                <a href="recettes-saint-valentin.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">❤️ Saint-Valentin</a>
+                                <a href="recettes-halloween.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🎃 Halloween</a>
+                                <a href="recettes-noel.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🎄 Noël</a>
+                            </div>
+                    
+                            <!-- Cuisine du Monde -->
+                            <div>
+                                <span class="text-pink-800 font-bold px-6 py-2 block">🌍 Cuisine du Monde</span>
+                                <a href="recettes-italiennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍕 Italiennes</a>
+                                <a href="recettes-japonaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍣 Japonaises</a>
+                                <a href="recettes-indiennes.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🍛 Indiennes</a>
+                                <a href="recettes-Tunisienne.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🌶️ Tunisienne</a>
+                                <a href="recettes-francaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥖 Françaises</a>
+                                <a href="recettes-libanaises.html" class="block px-6 py-2 text-gray-700 hover:bg-pink-100 rounded-md">🥙 Libanaises</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <!--Contact-->
+                <a href="contact.html" class="bg-pink-700 text-white px-4 py-2 rounded-lg hover:bg-pink-600 font-semibold">Contact</a>
+
+                <!--Rechercher-->
+                <form id="searchForm" class="flex items-center space-x-2">
+                    <input type="text" id="searchInput" placeholder="Rechercher une recette..." class="border border-gray-300 rounded-full px-4 py-2 w-64 focus:outline-none focus:border-indigo-500">
+                    <button type="submit" class="bg-pink-700 text-white px-4 py-2 rounded-lg hover:bg-pink-600 font-semibold">Rechercher</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <br>
+    <br>
+    <br>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Pâtes Carbonara -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Pâtes Carbonara</h1>
+            <img src="" alt="Pâtes Carbonara" class="w-full h-64 object-cover rounded-lg mb-6 transition-transform transform hover:scale-105">
+            <p class="text-lg text-gray-700 font-medium">
+                Découvrez cette recette classique italienne de pâtes carbonara, crémeuses et délicieuses, parfaites pour toute occasion.
+            </p>
+        </section>
+        
+        <!-- Ingrédients -->
+
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Ingrédients</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto border-collapse">
+                            <tbody>
+                        <tr class="bg-pink-100 hover:bg-pink-200">
+                            <td class="p-4">Spaghettis</td>
+                            <td class="p-4">250g</td>
+                            <td class="p-4 text-center">🍝</td> <!-- Emoji Spaghettis -->
+                        </tr>
+                        <tr class="bg-yellow-100 hover:bg-yellow-200">
+                            <td class="p-4">Pancetta ou lardons</td>
+                            <td class="p-4">200g</td>
+                            <td class="p-4 text-center">🥓</td> <!-- Emoji Pancetta -->
+                        </tr>
+                        <tr class="bg-green-100 hover:bg-green-200">
+                            <td class="p-4">Œufs</td>
+                            <td class="p-4">3</td>
+                            <td class="p-4 text-center">🥚</td> <!-- Emoji Œufs -->
+                        </tr>
+                        <tr class="bg-orange-100 hover:bg-orange-200">
+                            <td class="p-4">Parmesan râpé</td>
+                            <td class="p-4">100g</td>
+                            <td class="p-4 text-center">🧀</td> <!-- Emoji Fromage -->
+                        </tr>
+                        <tr class="bg-gray-100 hover:bg-gray-200">
+                            <td class="p-4">Noix de muscade</td>
+                            <td class="p-4">Au goût</td>
+                            <td class="p-4 text-center">🌰</td> <!-- Emoji Noix -->
+                        </tr>
+                        <tr class="bg-blue-100 hover:bg-blue-200">
+                            <td class="p-4">Sel et poivre</td>
+                            <td class="p-4">Au goût</td>
+                            <td class="p-4 text-center">🧂</td> <!-- Emoji Sel -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Instructions -->
+        <section class="mb-8 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Instructions</h2>
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-pink-100 to-pink-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-pink-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🍝</span> Étape 1 : Préparation des Ingrédients
+                    </h3>
+                    <p class="text-gray-700">Préparez tous les ingrédients nécessaires. Faites cuire les spaghettis dans une grande casserole d'eau salée bouillante jusqu'à ce qu'ils soient al dente.</p>
+                </div>
+        
+                <!-- Step 2 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-yellow-100 to-yellow-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-yellow-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🥓</span> Étape 2 : Cuisson de la Pancetta
+                    </h3>
+                    <p class="text-gray-700">Faites revenir la pancetta dans une poêle chaude jusqu'à ce qu'elle soit croustillante.</p>
+                </div>
+        
+                <!-- Step 3 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-green-100 to-green-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🥚</span> Étape 3 : Préparation du Mélange d'Œufs
+                    </h3>
+                    <p class="text-gray-700">Battez les œufs avec le parmesan et la noix de muscade dans un bol.</p>
+                </div>
+        
+                <!-- Step 4 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-orange-100 to-orange-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-orange-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🍳</span> Étape 4 : Mélange des Pâtes et de la Pancetta
+                    </h3>
+                    <p class="text-gray-700">Égouttez les pâtes et ajoutez-les à la poêle avec la pancetta. Mélangez bien.</p>
+                </div>
+        
+                <!-- Step 5 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-blue-100 to-blue-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🥄</span> Étape 5 : Ajout du Mélange d'Œufs
+                    </h3>
+                    <p class="text-gray-700">Hors du feu, versez rapidement le mélange d'œufs sur les pâtes en remuant constamment.</p>
+                </div>
+        
+                <!-- Step 6 -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-teal-100 to-teal-200 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-3 flex items-center">
+                        <span class="mr-3 text-xl">🧂</span> Étape 6 : Assaisonnement Final
+                    </h3>
+                    <p class="text-gray-700">Salez et poivrez selon votre goût. Servez immédiatement.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conseils -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Conseils</h2>
+            <div class="bg-gradient-to-r from-green-100 to-green-200 p-4 rounded-lg hover:shadow-xl transition-shadow">
+                <p class="text-lg text-gray-700 flex items-center">
+                    <span class="mr-3 text-2xl">💡</span> Vous pouvez ajouter des champignons ou des épinards pour varier la recette.
+                </p>
+            </div>
+        </section>
+
+        <!-- Commentaires Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Commentaires</h2>
+            <form action="#" method="post" class="flex flex-col space-y-6">
+                <textarea name="comment" id="comment" placeholder="Votre commentaire..." class="border p-3 rounded-lg text-gray-700 focus:ring-2 focus:ring-pink-400 transition-all"></textarea>
+                <button type="submit" class="bg-pink-700 text-white px-6 py-3 rounded-lg hover:bg-pink-600 transition-all">Envoyer</button>
+            </form>
+            <!-- Display Comments -->
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold mb-3 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Derniers Commentaires</h3>
+                <ul class="space-y-3">
+                    <li class="text-gray-700">"Excellent recette !" - <span class="font-semibold">Asma Jandoubi</span></li>
+                    <li class="text-gray-700">"J'ai adoré !" - <span class="font-semibold">Sonya Naili</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Partager cette recette Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">Partager cette recette</h2>
+            <div class="flex space-x-6">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share?url=URL_DE_LA_PAGE" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-all">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/share?url=URL_DE_LA_PAGE" target="_blank" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-500 transition-all">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/share?url=URL_DE_LA_PAGE" target="_blank" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">FAQ</h2>
+            <div class="space-y-6">
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold mb-3 text-pink-800 cursor-pointer">Q: Quels sont les ingrédients principaux ?</h3>
+                    <p class="text-black text-xl answer" style="display: none;">R: Les ingrédients principaux sont les spaghettis, la pancetta, les œufs, le parmesan et la noix de muscade.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold mb-3 text-pink-800 cursor-pointer">Q: Comment cuire les pâtes correctement ?</h3>
+                    <p class="text-black text-xl answer" style="display: none;">R: Cuisez les spaghettis dans une grande casserole d'eau salée bouillante jusqu'à ce qu'ils soient al dente.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold mb-3 text-pink-800 cursor-pointer">Q: Que faire si je n'ai pas de pancetta ?</h3>
+                    <p class="text-black text-xl answer" style="display: none;">R: Vous pouvez utiliser du bacon ou des lardons comme alternative.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-semibold mb-3 text-pink-800 cursor-pointer">Q: Comment conserver les restes de la recette ?</h3>
+                    <p class="text-black text-xl answer" style="display: none;">R: Conservez les restes dans un contenant hermétique au réfrigérateur pour une consommation dans les 2-3 jours suivants.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5 Stars -->
+
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">
+                Donnez-nous votre avis !
+            </h2>
+            <div class="flex items-center space-x-4">
+                <span class="text-lg font-medium text-pink-800" style="font-family: Georgia, 'Times New Roman', serif;">
+                    Notez cette recette :
+                </span>
+                <div class="flex space-x-1" id="rating">
+                    <i class="fa fa-star text-gray-400 cursor-pointer text-2xl transition-all transform hover:scale-110 hover:text-yellow-500" data-value="1"></i>
+                    <i class="fa fa-star text-gray-400 cursor-pointer text-2xl transition-all transform hover:scale-110 hover:text-yellow-500" data-value="2"></i>
+                    <i class="fa fa-star text-gray-400 cursor-pointer text-2xl transition-all transform hover:scale-110 hover:text-yellow-500" data-value="3"></i>
+                    <i class="fa fa-star text-gray-400 cursor-pointer text-2xl transition-all transform hover:scale-110 hover:text-yellow-500" data-value="4"></i>
+                    <i class="fa fa-star text-gray-400 cursor-pointer text-2xl transition-all transform hover:scale-110 hover:text-yellow-500" data-value="5"></i>
+                </div>
+                <span id="rating-value" class="text-lg font-medium text-pink-800 ml-2">0/5</span>
+            </div>
+        </section>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-pink-800 text-white py-4 text-center">
+        <p>&copy; 2025 Site de Recettes. Tous droits réservés.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        /*5 Stars*/
+        const stars = document.querySelectorAll("#rating .fa-star");
+        const ratingValue = document.getElementById("rating-value");
+    
+        stars.forEach(star => {
+            star.addEventListener("click", () => {
+                const rating = star.getAttribute("data-value");
+    
+                // Update the rating value text
+                ratingValue.textContent = `${rating}/5`;
+    
+                // Change the color of stars based on the rating
+                stars.forEach(s => {
+                    s.classList.remove("text-yellow-500");
+                    if (s.getAttribute("data-value") <= rating) {
+                        s.classList.add("text-yellow-500");
+                    }
+                });
+            });
+        });
+        /*FAQ*/
+        // Select all FAQ question elements
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3');
+            const answer = item.querySelector('.answer');
+            
+            // Add click event to toggle answer visibility
+            question.addEventListener('click', () => {
+                const isVisible = answer.style.display === 'block';
+                answer.style.display = isVisible ? 'none' : 'block';
+                
+                // Optional: Add smooth transition for the answer
+                answer.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Barre de recherche
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                alert(`Recherche pour : "${query}"`);
+
+                // Ici, vous pouvez ajouter une requête API pour filtrer les recettes
+
+        }
+        });
+    </script>
+
+</body>
+</html>
